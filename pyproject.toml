@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helix-ai-engine"
+version = "1.0.0"
+description = "Modular, provider-agnostic AI orchestration engine (RAG + agents)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "晨星" }]
+keywords = ["ai", "llm", "rag", "agents", "orchestration", "embedding", "vector-search"]
+dependencies = [
+    "numpy",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "httpx",
+    "scikit-learn",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+helix = "helix.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["helix*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
