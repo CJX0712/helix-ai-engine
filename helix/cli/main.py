@@ -43,7 +43,7 @@ async def _agent_demo(container: Container, task: str) -> None:
 async def _serve() -> None:
     import uvicorn
 
-    from . import create_app
+    from ..api import create_app
 
     app = create_app()
     uvicorn.run(app, host="0.0.0.0", port=8000)
