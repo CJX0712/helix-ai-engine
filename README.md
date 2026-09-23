@@ -1,5 +1,11 @@
 # Helix AI Engine
 
+<p align="center">
+  <a href="https://github.com/CJX0712/helix-ai-engine-28191/actions/workflows/ci.yml"><img src="https://github.com/CJX0712/helix-ai-engine-28191/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
+  <a href="https://github.com/CJX0712/helix-ai-engine-28191/releases"><img src="https://img.shields.io/github/v/release/CJX0712/helix-ai-engine-28191?sort=semver" alt="release"></a>
+  <img src="https://img.shields.io/badge/author-%E6%99%A8%E6%98%9F-1f6feb" alt="author">
+</p>
+
 A modular, provider-agnostic AI orchestration engine: RAG + tool-using agents,
 wired through clean interface contracts so every module is independently
 verifiable and the whole system is reproducible from a clean environment.
