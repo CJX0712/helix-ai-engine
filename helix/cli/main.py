@@ -40,7 +40,7 @@ async def _agent_demo(container: Container, task: str) -> None:
     print(await container.agent.run(task))
 
 
-async def _serve() -> None:
+def _serve() -> None:
     import uvicorn
 
     from ..api import create_app
@@ -67,7 +67,7 @@ def main(argv: list = None) -> None:
 
     container = Container(settings)
     if args.cmd == "serve":
-        asyncio.run(_serve())
+        _serve()
     elif args.cmd == "chat":
         asyncio.run(_chat(container, args.prompt))
     elif args.cmd == "rag":
